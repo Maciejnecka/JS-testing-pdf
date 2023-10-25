@@ -96,3 +96,42 @@
 //   console.trace();
 //   return Math.random();
 // }
+
+// const arr = [1, 2, 3];
+// console.log(arr);
+// console.dir(arr);
+
+// arr.push(4);
+// console.log(arr);
+// console.dir(arr);
+
+// const arr = [
+//   { firstName: 'Jan', lastName: 'Kowalski' },
+//   { firstName: 'Andrzej', lastName: 'Nowak' },
+//   { firstName: 'Julia', lastName: 'Polak' },
+// ];
+
+// console.table(arr);
+
+init();
+
+function init() {
+  const bigger = getBigger();
+  console.log(bigger);
+}
+
+function getBigger() {
+  debugger;
+  const a = randomNumber();
+  debugger;
+  const b = randomNumber();
+
+  if (a > b) {
+    return a;
+  }
+  return b;
+}
+
+function randomNumber() {
+  return Math.random();
+}
