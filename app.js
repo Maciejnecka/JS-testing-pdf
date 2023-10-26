@@ -113,25 +113,25 @@
 
 // console.table(arr);
 
-init();
+// init();
 
-function init() {
-  const bigger = getBigger();
-  console.log(bigger);
-}
+// function init() {
+//   const bigger = getBigger();
+//   console.log(bigger);
+// }
 
-function getBigger() {
-  debugger;
-  const a = randomNumber();
-  debugger;
-  const b = randomNumber();
+// function getBigger() {
+//   debugger;
+//   const a = randomNumber();
+//   debugger;
+//   const b = randomNumber();
 
-  if (a > b) {
-    return a;
-  }
-  return b;
-}
+//   if (a > b) {
+//     return a;
+//   }
+//   return b;
+// }
 
-function randomNumber() {
-  return Math.random();
-}
+// function randomNumber() {
+//   return Math.random();
+// }
