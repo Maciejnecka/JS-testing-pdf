@@ -121,9 +121,7 @@
 // }
 
 // function getBigger() {
-//   debugger;
 //   const a = randomNumber();
-//   debugger;
 //   const b = randomNumber();
 
 //   if (a > b) {
@@ -135,3 +133,61 @@
 // function randomNumber() {
 //   return Math.random();
 // }
+
+// const btnEl = document.querySelector('.not-exist');
+// btnEl.classList.add('new-class');
+// function addClass() {
+//   try {
+//     const btnEl = document.querySelector('.not-exist');
+//     btnEl.classList.add('new-class');
+//   } catch (e) {
+//     console.log('Szczegóły błędu: ');
+//     console.log('Nazwa: ', e.name);
+//     console.log('Wiadomość: ', e.message);
+//   } finally {
+//     alert('Tak czy inaczej poradzimy sobie!');
+//   }
+// }
+// try {
+//   addClass();
+// } catch (e) {
+//   console.error('Komunikat nie będzie widoczny!');
+// }
+
+// try {
+//   const btnEl = document.querySelector('.not-exist');
+
+//   btnEl.classList.add('new-class');
+// } catch (e) {
+//   if (e instanceof ReferenceError) {
+//     console.warn('Złe przypisanie');
+//   } else if (e instanceof TypeError) {
+//     console.error('Zła wartość');
+//   }
+// } finally {
+//   alert('Tak czy inazcej poradzimy sobie!');
+// }
+
+// function getBasketPrice(items) {
+//   if (!Array.isArray(items)) {
+//     throw new TypeError('Param is not an array');
+//   }
+//   items.reduce((acc, item) => {
+//     const { price = -1, count = -1 } = item;
+//     if (price < 0 || count < 0) {
+//       throw new RangeError('The value cannot be negatie');
+//     }
+//     return acc + price * count;
+//   }, 0);
+// }
+// try {
+//   const price = getBasketPrice([{}, {}]);
+// } catch (e) {
+//   console.dir(e);
+// }
+(function () {
+  'use strict';
+  console.log('Tryb ścisły włączony');
+})();
+
+console.log('brak trybu ścisłego');
