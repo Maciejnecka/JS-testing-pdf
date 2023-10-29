@@ -10,10 +10,15 @@ class Calculator {
     }
     this[propName] = value;
   }
-  add() {
+  add(callback) {
     const { num1, num2 } = this;
-    return num1 + num2;
+    const promise = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(num1 + num2);
+      }, Math.random() * 90 + 10);
+    });
+    return promise;
   }
 }
 
-module.exports = Calculator;
+export default Calculator;
