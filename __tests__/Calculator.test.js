@@ -99,4 +99,15 @@ describe('Calculator', () => {
     // then
     expect(createCalc).toThrow();
   });
+
+  it('Should reject when divine by 0', () => {
+    expect.assertions(1);
+    // given
+    const calc = new Calculator(2, 1);
+    //when
+    return calc.divide().catch((err) => {
+      //then
+      expect(err.message).toBe('Division by 0!');
+    });
+  });
 });

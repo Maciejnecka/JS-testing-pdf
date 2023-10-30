@@ -19,6 +19,19 @@ class Calculator {
     });
     return promise;
   }
+  divide() {
+    const { num1, num2 } = this;
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (num2 === 0) {
+          reject(new Error('Division by 0!'));
+        } else {
+          resolve(num1 / num2);
+        }
+      }, Math.random() * 90 + 10);
+    });
+    return promise;
+  }
 }
 
 export default Calculator;
